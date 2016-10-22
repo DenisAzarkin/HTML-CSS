@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Урок 1</title>
+</head>
+
+<body>
+<div style="margin: 0 auto; width: 70%">
+	<h1>Денис Азаркин</h1>
+	<h2>Урок 1</h2>
+	<hr>
+	<p>
+		<b>1. </b>Вывести "Привет, JavaScript!" с помощью alert
+	</p>
+	<input type="button" onclick="alert('Привет, JavaScript!')" value="Нажми на кнопку, чтобы вывести надпись">
+	<hr>
+
+	<p>
+		<b>2. </b>Работа с переменными
+	</p>
+	<label>Введите имя:</label>
+	<input type="text" id="name" name="name" value="Василий">
+	<input type="button" onclick="nameTextuser ()" value="Нажми на кнопку, чтобы вывести надпись">&nbsp;<button type="button" onclick='clearInput ()'>Очистить</button>
+	<script src="main.js" charset="utf-8"></script>
+	<hr>
+
+	<p>
+		<b>3. </b>* Самостоятельно разобраться с атрибутами тега script (async и defer)
+	</p>
+	<p>
+		<blockquote>
+			При наличии атрибута async браузер при возможности запускает скрипт асинхронно.<br>
+			Это означает, что указанный в атрибуте src файл будет выполняться без ожидания загрузки и отображения веб-страницы.<br>
+			В то же время и страница не ожидает результата выполнения скрипта, а продолжает загружаться как обычно.
+		</blockquote>
+	</p>
+	<p>
+		<blockquote>
+			Атрибут defer откладывает выполнение скрипта до тех пор, пока вся страница не будет загружена полностью. 
+		</blockquote>
+	</p>
+	<hr>
+	<p>
+		<b>3.1. </b> Пример использования атрибута async.
+	</p>
+	<p>
+		В данном примере загружается содержимое страницы и одновременно выполняется скрипт, который выводит сообщение через функцию alert().
+	</p>
+	<p>
+		Без атрибута async содержимое страницы не отображается, пока мы не закроем окно с сообщением.
+	</p>
+
+	<textarea>
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>async</title>
+  <script async src="scripts/async.js"></script>
+ </head>
+ <body>
+  <p>Пример страницы</p>
+ </body>
+</html>
+	</textarea>
+
+	<hr>
+	<p>
+		<b>3.2. </b>Пример использования атрибута defer.
+	</p>
+	<p>
+		В скрипте данного примера значение текстового поля с именем textField приравнивается 17.
+	</p>
+	<p>
+		Однако при запуске скрипта форма еще не инициализирована, поэтому требуется использовать атрибут defer.
+	</p>
+	<p>
+		Без него будет выведена ошибка.
+	</p>
+	<textarea>
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Тег SCRIPT, атрибут defer</title>
+  <script defer>
+    document.forms[0].textField.value = 17;
+  </script>
+ </head>
+ <body>
+
+  <form action="handler.php">
+   <p>Введите ваш возраст</p>
+   <p><input type="text" name="textField"></p>
+  </form>
+
+ </body>
+</html>
+	</textarea>
+	
+	<hr>
+	<footer style="text-align: center; padding-top: 20px" ><p>Это футер, если что</p><p>2016</p></footer>
+</div>
+</body>
+</html>
