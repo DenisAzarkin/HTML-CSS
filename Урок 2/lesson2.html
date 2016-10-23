@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<title>Урок 2</title>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="content">
+	
+	<h1>Денис Азаркин</h1>
+	<h2>Урок 2</h2>
+	<hr>
+	<div class="navigate">
+		<a href="index.html">Главная</a> > Урок 2
+	</div>
+	<hr>
+	<p>
+		<b>1. </b>Необходимо разобраться почему работает именно так. Подробности в комментариях к коду.
+	</p>
+	<script>
+		var a =1, b = 1, c, d;
+
+		c = ++a; document.writeln("c=", + c); //2 Запись аналогична записи c=(a=a+1) и alert выводит текущее значение счётчика
+		d = b++; document.writeln("d=", + d); // 1 Запись аналогична записи d=(b=b+1) и alert выводит предыдущее значение счётчика
+
+		c = (2+ ++a); document.writeln("c=", + c); // 5 Так как a=3 и плюс + 2, получаем 5
+		d = (2+ b++); document.writeln("d=", + d); //4 Так как b=2 и плюс + 2, получаем 4. alert выводит 4, т.к. в b++ возвращает предыдущее значение
+
+		document.writeln("a=", + a); // 3 Из последнего присвоенного значения ++a, где a=a+1, т.е. 3
+		document.writeln("b=", + b); // 3 Последнее действие было b++ и теперь вернём хранящееся значение, т.е. 3
+	</script><p></p>
+	<hr>
+	<p>
+		<b>2. </b>Чему будет равен <i>x</i> в примере ниже. Подробности в комментариях.
+	</p>
+	<script>
+		var a = 2;
+
+		var x = 1 + (a *= 2); // x=5, так как a=a*2
+
+		document.writeln("x=", + x);
+	</script><p></p>
+	<hr>
+	<p>
+		<b>3. </b>* Забегая немного вперёд...
+	</p>
+	
+	<blockquote>
+		Забегая немного вперед. Напишите программу, которая выводит через console.log все числа от 1 до 100, с двумя исключениями. Для чисел, нацело делящихся на 3, она должна выводить ‘Fizz’, а для чисел, делящихся на 5 (но не на 3) – ‘Buzz’. Когда сумеете – исправьте её так, чтобы она выводила «FizzBuzz» для всех чисел, которые делятся и на 3 и на 5.
+	</blockquote><br>
+	<script src="lesson2.js"></script>
+	<p></p>
+	<textarea>
+// Задание 3 из "Урока 2"
+
+var i; 
+
+for (i = 1; i <= 100; ++i) {
+if ((i % 3) == 0) {
+	document.writeln("Fizz=", + i);
+}
+if ((i % 5) == 0) {
+	document.writeln("Buzz=", + i);
+}
+if (((i % 5) == 0) && ((i % 3) == 0) ) {
+	document.writeln("FizzBuzz=", + i);
+}
+}
+	</textarea>
+
+	</div>
+	<footer><p><script src="footer.js"></script></p></footer>
+
+</div>
+</body>
+</html>
