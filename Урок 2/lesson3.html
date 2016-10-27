@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<title>Урок 3</title>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="content">
+	
+	<h1>Денис Азаркин</h1>
+	<h2>Урок 3</h2>
+	<hr>
+	<div class="navigate">
+		<a href="index.html">Главная</a> > Урок 3
+	</div>
+	<hr>
+	<p>
+		<b>1. </b>Владея навыками написания циклов и условных операторов, выполните задание со * из предыдущего урока используя тернарный оператор
+	</p>
+	
+	<script src="lesson3.js"></script>
+
+<p></p>
+	<hr>
+	<p>
+		<b>2. </b>Напишите цикл, выводящий такой треугольник
+	</p>
+	
+	<script>
+		var i;
+		var j;
+		
+		for (i = 1; i <= 7; ++i) {
+
+			for (j = 1; j <= i; ++j){
+			document.writeln("#");				
+			}
+			document.writeln("<br>");
+		}
+	
+	</script>
+	
+	<p></p>
+	<hr>
+	<p>
+		<b>3. </b>* Напишите программу, создающую строку, содержащую решётку 8х8, в которой линии разделяются символами новой строки. На каждой позиции либо пробел, либо #. В результате должна получиться шахматная доска
+	</p>
+
+	<script>
+		var i;
+		var j;
+		for (i = 1; i <= 8; ++i) {
+
+			for (j = 1; j <= 8; ++j){
+				if (j<=8) {
+				if ((i % 2) == 0){
+					if ((j % 2) == 0) {
+						document.writeln("<font color=\"BF6430\">&#9632;</font>");
+							}
+					else {
+						document.writeln("<font color=\"555000\">&#9632;</font>");						
+						}
+				}
+				else {
+					if ((j % 2) == 0) {
+						document.writeln("<font color=\"555000\">&#9632;</font>");
+					}
+					else {
+						document.writeln("<font color=\"BF6430\">&#9632;</font>");						
+					}
+				}
+						
+					}
+			}
+								
+			document.writeln("<br>");
+		}
+
+	</script>
+<br><br><br><br><br><br><br>
+
+	</div>
+	<footer><p><script src="footer.js"></script></p></footer>
+
+</div>
+</body>
+</html>
