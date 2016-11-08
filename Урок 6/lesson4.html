@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="lesson4.js" defer></script>
+	<title>Урок 4</title>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="content">
+	
+	<h1>Денис Азаркин</h1>
+	<h2>Урок 4</h2>
+	<hr>
+	<div class="navigate">
+		<a href="index.html">Главная</a> > Урок 4
+	</div>
+	<hr>
+	<p>
+		<b>1. </b>Напишите функцию min, принимающую два аргумента, и возвращающую минимальный из них
+	</p>
+	
+	<input type="number" id="numA" name="numA" value="0">&nbsp;
+	<input type="number" id="numB" name="numB" value="10"><br>
+	<input type="button" onclick="showMin()" value="Найти минимальное из этих чисел">
+	<p></p>
+	<input type="text" id="resultMin" value="" placeholder="Результат">&nbsp;<button type="button" onclick='clearInput("resultMin")'>Очистить</button>
+	<p></p>
+	<hr>
+	<p>
+		<b>2. </b>Символ номер N строки можно получить, добавив к ней .charAt(N) ( “строчка”.charAt(5) ) – схожим образом с получением длины строки при помощи .length. Возвращаемое значение будет строковым, состоящим из одного символа (к примеру, “к”). У первого символа строки позиция 0, что означает, что у последнего символа позиция будет string.length – 1. Другими словами, у строки из двух символов длина 2, а позиции её символов будут 0 и 1.Напишите функцию countBs, которая принимает строку в качестве аргумента, и возвращает количество символов “B”, содержащихся в строке.Затем напишите функцию countChar, которая работает примерно как countBs, только принимает второй параметр — символ, который мы будем искать в строке (вместо того, чтобы просто считать количество символов “B”). Для этого переделайте функцию countBs. 
+	</p>
+	<input type="text" id="strChar" name="strChar" value="iririBBierwoBqB">&nbsp;<button type="button" onclick='clearInput("strChar")'>Очистить</button><br>
+	<input type="text" id="foundChar" name="foundChar" value="B">&nbsp;<button type="button" onclick='clearInput("foundChar")'>Очистить</button><br>
+	<input type="button" onclick="showChar()" value="Найти символ">
+	<p></p>
+	<input type="text" id="resultChar" value="" placeholder="Результат">&nbsp;<button type="button" onclick='clearInput("resultChar")'>Очистить</button>
+
+	
+	<p></p>
+	<hr>
+	<p>
+		<b>3. </b>* Ноль чётный. Единица нечётная. У любого числа N чётность такая же, как у N-2.Напишите рекурсивную функцию isEven согласно этим правилам. Она должна принимать число и возвращать булевское значение. Потестируйте её на 50 и 75. Попробуйте задать ей -1. Почему она ведёт себя таким образом? Можно ли её как-то исправить?
+	</p>
+
+	<input type="number" id="TFNum" name="TFNum" value="10">&nbsp;
+	<input type="button" onclick="showTFNum()" value="Найти булевое значение числа"><br>
+		<p></p>
+	<input type="text" id="resultTFNum" value="" placeholder="Результат">&nbsp;<button type="button" onclick='clearInput("resultTFNum")'>Очистить</button>
+<br><br><br><br><br><br><br>
+
+	</div>
+	<footer><p><script src="footer.js"></script></p></footer>
+
+</div>
+</body>
+</html>
