@@ -1,0 +1,32 @@
+#chessBoardLet {
+    width: 240px;
+    height: 25px;
+    margin-left: 30px;
+}
+#boardNum {
+	 width: 25px;
+    height: 240px;
+    float: left;
+}
+#chessBoard {
+    width: 240px;
+    height: 240px;
+    border: 2px solid black;
+    margin-left: 30px ;
+}
+.yellow {
+    background: yellow;
+}
+.brown {
+    background: brown;
+}
+#chessBoardLet > div,
+#chessBoard > div,
+#boardNum > div {
+	 vertical-align: middle;
+    line-height: 30px;
+    font-size: 1.6em;
+    width: 30px;
+    height: 30px;
+    float: left;
+}
